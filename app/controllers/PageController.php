@@ -4,7 +4,9 @@
 namespace app\controllers;
 
 
-class PageController
+use ishop\base\Controller;
+
+class PageController extends AppController
 {
 
     public function viewAction(){
