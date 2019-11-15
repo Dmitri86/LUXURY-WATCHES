@@ -4,7 +4,10 @@
 namespace ishop\base;
 
 
-abstract class Model {
+use ishop\Db;
+
+
+abstract class Model extends \RedBeanPHP\SimpleModel{
 
     public $attributes = [];
     public $errors = [];
@@ -12,6 +15,7 @@ abstract class Model {
 
 
     public function __construct(){
+        Db::instance();
 
     }
 
