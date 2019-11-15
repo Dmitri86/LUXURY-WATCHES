@@ -8,7 +8,7 @@ define('CORE', ROOT . '/vendor/ishop/core');
 define('LIBS', CORE . '/libs');
 define("CASH", ROOT . '/tmp/cash');
 define("CONF", ROOT . '/config');
-define('LAYOUT', 'default');
+define('LAYOUT', 'watches');
 
 
 //http://ishop2.loc/public/index.php

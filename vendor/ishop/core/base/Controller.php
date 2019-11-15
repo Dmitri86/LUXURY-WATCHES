@@ -27,6 +27,10 @@ abstract class Controller {
         $this->data = $data;
     }
 
+//    public function getMeta(){
+//        return $this->meta;
+//    }
+
     public function setMeta($title = '', $desc = '', $keywords = ''){
         $this->meta['title'] = $title;
         $this->meta['desc'] = $desc;
