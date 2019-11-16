@@ -4,6 +4,10 @@
     <list default="true" id="90f08f87-6a76-4368-861d-af41cb0c35ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/watches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/currency/Currency.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/currency/Currency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/currency/currenct_tpl/currency.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/currency/currenct_tpl/currency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ishop/core/libs/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ishop/core/libs/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +52,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ishop2.loc" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,7 +106,7 @@
       <workItem from="1573667587500" duration="10137000" />
       <workItem from="1573722066674" duration="3062000" />
       <workItem from="1573740045118" duration="11208000" />
-      <workItem from="1573808687692" duration="18095000" />
+      <workItem from="1573808687692" duration="22140000" />
     </task>
     <servers />
   </component>
