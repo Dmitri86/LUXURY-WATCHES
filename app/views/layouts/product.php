@@ -11,6 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <?=$this->getMeta();?>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="megamenu/css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <!--theme-style-->
@@ -92,24 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
 </div>
 <!--bottom-header-->
-<!--banner-starts-->
-<div class="bnr" id="home">
-    <div  id="top" class="callbacks_container">
-        <ul class="rslides" id="slider4">
-            <li>
-                <img src="images/bnr-1.jpg" alt=""/>
-            </li>
-            <li>
-                <img src="images/bnr-2.jpg" alt=""/>
-            </li>
-            <li>
-                <img src="images/bnr-3.jpg" alt=""/>
-            </li>
-        </ul>
-    </div>
-    <div class="clearfix"> </div>
-</div>
-<!--banner-ends-->
+
 
 <div class="content">
     <?=$content;?>
@@ -206,6 +190,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 <script src="js/main.js"></script>
 <script src="megamenu/js/megamenu.js"></script>
+<script src="js/imagezoom.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
 <!--End-slider-script-->
 </body>
 </html>
+
