@@ -29,11 +29,13 @@ class ProductController extends AppController {
         // просмотреные товары
 
         // галерея
+        $gallery = R::getAll('SELECT * FROM gallery WHERE product_id = ?', [$product->id]);
+
 
         // модификации
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->set(compact('product', 'related'));
+        $this->set(compact('product', 'related', 'gallery'));
 
     }
 }
