@@ -4,6 +4,7 @@
 namespace app\controllers;
 
 
+use app\models\Product;
 use RedBeanPHP\R;
 
 class ProductController extends AppController {
@@ -25,8 +26,17 @@ class ProductController extends AppController {
 
 
         // запись в куки запрошеного товара
+        $p_model = new Product();
+        $p_model->setRecentlyViewed($product->id);
 
         // просмотреные товары
+        $r_viewed = $p_model->getRecentlyViewed();
+        $recentlyViewed = null;
+        if($r_viewed){
+            $recentlyViewed = R::find('product', 'id IN ('.R::genSlots($r_viewed)
+                .') LIMIT 3', $r_viewed);
+        }
+
 
         // галерея
         $gallery = R::getAll('SELECT * FROM gallery WHERE product_id = ?', [$product->id]);
@@ -35,7 +45,7 @@ class ProductController extends AppController {
         // модификации
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->set(compact('product', 'related', 'gallery'));
+        $this->set(compact('product', 'related', 'gallery', 'recentlyViewed'));
 
     }
 }
