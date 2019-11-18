@@ -207,5 +207,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/main.js"></script>
 <script src="megamenu/js/megamenu.js"></script>
 <!--End-slider-script-->
+<?php
+use \RedBeanPHP\R as R;
+$logs = R::getDatabaseAdapter()
+    ->getDatabase()
+    ->getLogger();
+
+debug( $logs->grep( 'SELECT' ) );
+
+?>
 </body>
 </html>
