@@ -28,34 +28,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="top-header">
     <div class="container">
         <div class="top-header-main">
-            <div class="col-md-6 top-header-left">
-                <div class="drop">
-                    <div class="box">
-                        <select id="currency" tabindex="4" class="dropdown drop">
-                            <?php new \app\widgets\currency\Currency();?>
-                        </select>
+            <div class="row">
+                <div class="col-md-6 top-header-left">
+                    <div class="drop">
+                        <div class="box">
+                            <select id="currency" tabindex="4" class="dropdown drop">
+                                <?php new \app\widgets\currency\Currency();?>
+                            </select>
+                        </div>
+                        <div class="box1">
+                            <select tabindex="4" class="dropdown">
+                                <option value="" class="label">English :</option>
+                                <option value="1">English</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <div class="box1">
-                        <select tabindex="4" class="dropdown">
-                            <option value="" class="label">English :</option>
-                            <option value="1">English</option>
-                            <option value="2">French</option>
-                            <option value="3">German</option>
-                        </select>
-                    </div>
-                    <div class="clearfix"></div>
                 </div>
+                <div class="col-md-6 top-header-left">
+                    <div class="cart box_1">
+                        <a href="checkout.html">
+                            <div class="total">
+                                <span class="simpleCart_total"></span></div>
+                            <img src="images/cart-1.png" alt="" />
+                        </a>
+                        <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                        <div class="clearfix"> </div>
+                    </div>
             </div>
-            <div class="col-md-6 top-header-left">
-                <div class="cart box_1">
-                    <a href="checkout.html">
-                        <div class="total">
-                            <span class="simpleCart_total"></span></div>
-                        <img src="images/cart-1.png" alt="" />
-                    </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-                    <div class="clearfix"> </div>
-                </div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -71,21 +71,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="header-bottom">
     <div class="container-fluid">
         <div class="header">
-            <div class="col-md-9 header-left">
-                <div class="menu-container">
-                    <div class="menu">
-                        <?php new \app\widgets\menu\Menu([
-                            'tpl' => WWW . '/menu/menu.php'
-                        ]);?>
+            <div class="row">
+                <div class="col-md-9 header-left">
+                    <div class="menu-container">
+                        <div class="menu">
+                            <?php new \app\widgets\menu\Menu([
+                                'tpl' => WWW . '/menu/menu.php'
+                            ]);?>
+                        </div>
                     </div>
+                    <div class="clearfix"> </div>
                 </div>
-                <div class="clearfix"> </div>
-            </div>
 
-            <div class="col-md-3 header-right">
-                <div class="search-bar search">
-                    <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                    <input id='search-img' type="submit" value="">
+                <div class="col-md-3 header-right">
+                    <div class="search-bar search">
+                        <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                        <input id='search-img' type="submit" value="">
+                    </div>
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -96,8 +98,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <div class="content">
-    <?php //session_destroy(); ?>
-    <?php debug($_SESSION); ?>
     <?=$content;?>
 </div>
 
@@ -105,41 +105,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="information">
     <div class="container">
         <div class="infor-top">
-            <div class="col-md-3 infor-left">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>
-                    <li><a href="#"><span class="twit"></span><h6>Twitter</h6></a></li>
-                    <li><a href="#"><span class="google"></span><h6>Google+</h6></a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 infor-left">
-                <h3>Information</h3>
-                <ul>
-                    <li><a href="#"><p>Specials</p></a></li>
-                    <li><a href="#"><p>New Products</p></a></li>
-                    <li><a href="#"><p>Our Stores</p></a></li>
-                    <li><a href="contact.html"><p>Contact Us</p></a></li>
-                    <li><a href="#"><p>Top Sellers</p></a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 infor-left">
-                <h3>My Account</h3>
-                <ul>
-                    <li><a href="account.html"><p>My Account</p></a></li>
-                    <li><a href="#"><p>My Credit slips</p></a></li>
-                    <li><a href="#"><p>My Merchandise returns</p></a></li>
-                    <li><a href="#"><p>My Personal info</p></a></li>
-                    <li><a href="#"><p>My Addresses</p></a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 infor-left">
-                <h3>Store Information</h3>
-                <h4>The company name,
-                    <span>Lorem ipsum dolor,</span>
-                    Glasglow Dr 40 Fe 72.</h4>
-                <h5>+955 123 4567</h5>
-                <p><a href="mailto:example@email.com">contact@example.com</a></p>
+            <div class="row">
+                <div class="col-md-3 infor-left">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>
+                        <li><a href="#"><span class="twit"></span><h6>Twitter</h6></a></li>
+                        <li><a href="#"><span class="google"></span><h6>Google+</h6></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 infor-left">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#"><p>Specials</p></a></li>
+                        <li><a href="#"><p>New Products</p></a></li>
+                        <li><a href="#"><p>Our Stores</p></a></li>
+                        <li><a href="contact.html"><p>Contact Us</p></a></li>
+                        <li><a href="#"><p>Top Sellers</p></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 infor-left">
+                    <h3>My Account</h3>
+                    <ul>
+                        <li><a href="account.html"><p>My Account</p></a></li>
+                        <li><a href="#"><p>My Credit slips</p></a></li>
+                        <li><a href="#"><p>My Merchandise returns</p></a></li>
+                        <li><a href="#"><p>My Personal info</p></a></li>
+                        <li><a href="#"><p>My Addresses</p></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 infor-left">
+                    <h3>Store Information</h3>
+                    <h4>The company name,
+                        <span>Lorem ipsum dolor,</span>
+                        Glasglow Dr 40 Fe 72.</h4>
+                    <h5>+955 123 4567</h5>
+                    <p><a href="mailto:example@email.com">contact@example.com</a></p>
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -150,20 +152,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="footer">
     <div class="container">
         <div class="footer-top">
-            <div class="col-md-6 footer-left">
-                <form>
-                    <input type="text" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
-                    <input type="submit" value="Subscribe">
-                </form>
-            </div>
-            <div class="col-md-6 footer-right">
-                <p>© 2015 Luxury Watches. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-            </div>
+            <div class="row">
+                <div class="col-md-6 footer-left">
+                    <form>
+                        <input type="text" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+                <div class="col-md-6 footer-right">
+                    <p>© 2015 Luxury Watches.</p>
+                </div>
+                </div>
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
 <!--footer-end-->
+
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="myModalLongTitle">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-left" id="myModalTitle">Cart</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+
+
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Add purchase</button>
+                <a href="cart/view" type="button" class="btn btn-primary">Checkout</a>
+                <button type="button" class="btn btn-danger" onclick="clearCart()">Clear cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php $curr = \ishop\App::$app->getProperty('currency') ?>
 <script>
     var path = '<?=PATH;?>',
@@ -173,6 +201,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 
 <script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <!--dropdown-->
 <script src="js/jquery.easydropdown.js"></script>
 <!--Slider-Starts-Here-->

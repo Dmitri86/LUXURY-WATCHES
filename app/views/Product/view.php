@@ -13,8 +13,10 @@
 <div class="single contact">
     <div class="container">
         <div class="single-main">
+            <div class="row">
             <div class="col-md-9 single-main-left">
                 <div class="sngl-top">
+                    <div class="row">
                     <div class="col-md-5 single-top-left">
                         <?php if($gallery) : ?>
                         <div class="flexslider">
@@ -137,6 +139,7 @@
                 <div class="latestproducts">
                     <div class="product-one">
                         <h3>С этим товаром также покупают</h3>
+                        <div class="row">
                         <?php foreach ($related as $item) : ?>
                         <div class="col-md-4 product-left p-left">
                             <div class="product-main simpleCart_shelfItem">
@@ -163,12 +166,14 @@ href="cart/add?id=<?=$item['id']?>" data-id="<?=$item['id'];?>"><i></i></a>
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                </div>
                 <?php endif;?>
 
                 <?php if($recentlyViewed) : ?>
                     <div class="latestproducts">
                         <div class="product-one">
                             <h3>Недавно просмотренные:</h3>
+                            <div class="row">
                             <?php foreach ($recentlyViewed as $item) : ?>
                                 <div class="col-md-4 product-left p-left">
                                     <div class="product-main simpleCart_shelfItem">
@@ -192,16 +197,18 @@ href="cart/add?id=<?=$item['id']?>" data-id="<?=$item['id'];?>"><i></i></a>
                                     </div>
                                 </div>
                             <?php endforeach;?>
+                            </div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
                 <?php endif;?>
 
             </div>
+            </div>
             <div class="col-md-3 single-right">
                 <div class="w_sidebar">
                     <section  class="sky-form">
-                        <h4>Catogories</h4>
+                        <h4>Categories</h4>
                         <div class="row1 scroll-pane">
                             <div class="col col-4">
                                 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>All Accessories</label>
@@ -279,6 +286,7 @@ href="cart/add?id=<?=$item['id']?>" data-id="<?=$item['id'];?>"><i></i></a>
             </div>
             <div class="clearfix"> </div>
         </div>
+    </div>
     </div>
 </div>
 <!--end-single-->

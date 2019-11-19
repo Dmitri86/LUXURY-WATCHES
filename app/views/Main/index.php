@@ -4,18 +4,21 @@
 <div class="about">
     <div class="container">
         <div class="about-top grid-1">
-            <?php foreach ($brands as $brand) : ?>
-                <div class="col-md-4 about-left">
-                <figure class="effect-bubba">
-                    <img class="img-responsive" src="images/<?=$brand->img;?>" alt=""/>
-                    <figcaption>
-                        <h2><?=$brand->title;?></h2>
-                        <p><?=$brand->description?></p>
-                    </figcaption>
-                </figure>
-            </div>
+            <div class="row">
+                <?php foreach ($brands as $brand) : ?>
 
-            <?php endforeach; ?>
+                    <div class="col-md-4 about-left">
+                    <figure class="effect-bubba">
+                        <img class="img-responsive" src="images/<?=$brand->img;?>" alt=""/>
+                        <figcaption>
+                            <h2><?=$brand->title;?></h2>
+                            <p><?=$brand->description?></p>
+                        </figcaption>
+                    </figure>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -29,27 +32,29 @@
     <div class="container">
         <div class="product-top">
             <div class="product-one">
-                <?php foreach ($hits as $hit) : ?>
-                <div class="col-md-3 product-left">
-                    <div class="product-main simpleCart_shelfItem">
-                        <a href="product/<?=$hit->alias;?>" class="mask"><img class="img-responsive zoom-img" src="images/<?=$hit->img;?>" alt="" /></a>
-                        <div class="product-bottom">
-                            <h3><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h3>
-                            <p>Explore Now</p>
-                            <h4>
-                                <a data-id="<?=$hit->id;?>" class="add-to-cart-link" href="cart/add?<?=$hit->id;?>"><i></i></a> <span class=" item_price"><?=$curr['symbol_left'];?><?=round($hit->price * $curr['value']);?><?=$curr['symbol_right'];?></span>
-                                <?php if($hit->old_price): ?>
-                                    <small><del><?=$curr['symbol_left'];?><?=round($hit->old_price * $curr['value']);?>
-                                        <?=$curr['symbol_right'];?></del></small>
-                                <?php endif;?>
-                            </h4>
+                <div class="row">
+                    <?php foreach ($hits as $hit) : ?>
+                    <div class="col-md-3 product-left">
+                            <div class="product-main simpleCart_shelfItem">
+                                <a href="product/<?=$hit->alias;?>" class="mask"><img class="img-responsive zoom-img" src="images/<?=$hit->img;?>" alt="" /></a>
+                                <div class="product-bottom">
+                                    <h3><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h3>
+                                    <p>Explore Now</p>
+                                    <h4>
+                                        <a data-id="<?=$hit->id;?>" class="add-to-cart-link" href="cart/add?<?=$hit->id;?>"><i></i></a> <span class=" item_price"><?=$curr['symbol_left'];?><?=round($hit->price * $curr['value']);?><?=$curr['symbol_right'];?></span>
+                                        <?php if($hit->old_price): ?>
+                                            <small><del><?=$curr['symbol_left'];?><?=round($hit->old_price * $curr['value']);?>
+                                                    <?=$curr['symbol_right'];?></del></small>
+                                        <?php endif;?>
+                                    </h4>
+                                </div>
+                                <div class="srch">
+                                    <span>-50%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="srch">
-                            <span>-50%</span>
-                        </div>
-                    </div>
+                        <?php endforeach;?>
                 </div>
-                <?php endforeach;?>
                 <div class="clearfix"></div>
             </div>
         </div>
