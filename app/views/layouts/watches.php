@@ -46,12 +46,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="col-md-6 top-header-left">
                     <div class="cart box_1">
-                        <a href="checkout.html">
+                        <a href="cart/show" onclick="getCart(); return false">
                             <div class="total">
-                                <span class="simpleCart_total"></span></div>
-                            <img src="images/cart-1.png" alt="" />
+                                <img src="images/cart-1.png" alt="" />
+                                <?php if(!empty($_SESSION['cart'])) : ?>
+                                    <span class="simpleCart_total">
+    <?=$_SESSION['cart.currency']['symbol_left']. $_SESSION['cart.sum'].
+    $_SESSION['cart.currency']['symbol_right'] ;?>
+                                    </span>
+
+                                <?php else : ?>
+                                    <span class="simpleCart_total">Empty Cart</span>
+                                <?php endif; ?>
+                            </div>
                         </a>
-                        <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+
+<!--                        <a href="checkout.html">-->
+<!--                            <div class="total">-->
+<!--                                <span class="simpleCart_total"></span></div>-->
+<!--                            <img src="images/cart-1.png" alt="" />-->
+<!--                        </a>-->
+<!--                        <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>-->
                         <div class="clearfix"> </div>
                     </div>
                 </div>
@@ -200,7 +215,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Add purchase</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Add purchase</button>
                 <a href="cart/view" type="button" class="btn btn-primary">Checkout</a>
                 <button type="button" class="btn btn-danger" onclick="clearCart()">Clear cart</button>
             </div>

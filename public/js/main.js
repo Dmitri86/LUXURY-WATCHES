@@ -27,7 +27,40 @@ function showCart(cart){
     }
     $('#cart .modal-body').html(cart);
     $('#cart').modal();
+    if($('.cart-sum').text()){
+        $('.simpleCart_total').html($('#cart .cart-sum').text());
+    }else{
+        $('.simpleCart_total').text('Empty Cart');
+    }
 }
+
+function getCart(){
+    $.ajax({
+        url: '/cart/show',
+        type: 'GET',
+        success: function (res) {
+            showCart(res);
+        },
+        error: function () {
+            alert('Ошибка! Поробуте позже');
+        }
+    });
+}
+
+$('#cart .modal-body').on('click', '.del-item', function () {
+   var id = $(this).data('id');
+   $.ajax({
+      url: '/cart/delete',
+      data: {id: id},
+      type: 'GET',
+      success: function (res) {
+          showCart(res);
+      } ,
+       error: function () {
+           alert('Error!');
+       }
+   });
+});
 
 /*Cart*/
 
