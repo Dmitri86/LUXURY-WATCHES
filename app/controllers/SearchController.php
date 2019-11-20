@@ -19,4 +19,13 @@ WHERE title LIKE ? LIMIT 11', ["%{$query}%"]);
         }
         die;
     }
+
+    public function indexAction(){
+        $query = !empty(trim($_GET['s'])) ? trim($_GET['s']) : null;
+        if($query){
+            $products = R::find('product', 'title LIKE ?', ["%{$query}%"]);
+        }
+        $this->setMeta('Search: ' . h($query));
+        $this->set(compact('products'));
+    }
 }
