@@ -14,7 +14,7 @@ class Breadcrumbs{
         $breadcrumbs = "<li><a href='". PATH ."'>Home<span style='margin: 0 10px;'>/</span></a></li>";
         if($breadcrumbs_array){
             foreach ($breadcrumbs_array as $alias => $title){
-                $breadcrumbs .= "<li><a href='". PATH  ."/category/{$alias}'>
+                $breadcrumbs .= "<li><a href='". PATH  ."'>
 {$title}<span style='margin: 0 10px;'>/</span></a></li>";
             }
         }

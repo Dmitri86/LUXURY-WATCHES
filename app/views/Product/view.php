@@ -82,9 +82,15 @@
                             </div>
                             <?php endif; ?>
                             <ul class="tag-men">
+
+                                <!--<li><span>Category</span>
+                                    <span>:
+<a href="category/<//?=$cats[$product->category_id]['alias'];?>">
+<//?=$cats[$product->category_id]['title'];?></a></span></li>-->
+
                                 <li><span>Category</span>
                                     <span>:
-<a href="category/<?=$cats[$product->category_id]['alias'];?>">
+<a href="<?=PATH;?>">
 <?=$cats[$product->category_id]['title'];?></a></span></li>
                             </ul>
                             <div class="quantity">
