@@ -62,6 +62,19 @@ $('#cart .modal-body').on('click', '.del-item', function () {
    });
 });
 
+function clearCart(){
+    $.ajax({
+        url: '/cart/destroy',
+        type: 'GET',
+        success: function (res) {
+            showCart(res);
+        },
+        error: function () {
+            alert('Ошибка! Поробуте позже');
+        }
+    });
+}
+
 /*Cart*/
 
 
