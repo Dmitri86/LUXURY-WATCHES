@@ -5,6 +5,7 @@ namespace ishop\base;
 
 
 use ishop\Db;
+use Valitron\Validator;
 
 
 abstract class Model extends \RedBeanPHP\SimpleModel{
@@ -25,6 +26,29 @@ abstract class Model extends \RedBeanPHP\SimpleModel{
                 $this->attributes[$name] = $data[$name];
             }
         }
+    }
+
+    public function validate($data){
+        $v = new Validator($data);
+        $v->rules($this->rules);
+        if($v->validate()){
+            return true;
+        }else {
+            $this->errors = $v->errors();
+            return false;
+
+        }
+    }
+
+    public function getErrors(){
+        $errors = '<ul>';
+        foreach ($this->errors as $error){
+            foreach ($error as $item){
+                $errors .= "<li>$item</li>";
+            }
+        }
+        $errors .= '</ul>';
+        $_SESSION['error'] = $errors;
     }
 
 }
