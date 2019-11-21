@@ -3,8 +3,7 @@
     <div class="container">
         <div class="breadcrumbs-main">
             <ol class="breadcrumb">
-                <li><a href="<?=PATH;?>">Home</a><span style='margin: 0 10px;'>/</span></li>
-                <li>Category</li>
+                <?=$breadcrumbs;?>
             </ol>
         </div>
     </div>
@@ -38,10 +37,17 @@
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="m-5">
+                                <?php if($pagination->countPages > 1) :?>
+                                    <?=$pagination;?>
+                                <?php endif;?>
+
 
                             </div>
                         <?php endif;?>
-                        <div class="clearfix"></div>
+
                     </div>
                 </div>
                 <div class="col-md-3 prdt-right">
