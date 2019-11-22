@@ -4,7 +4,7 @@
     <div class="container">
         <div class="breadcrumbs-main">
             <ol class="breadcrumb">
-                <li><a href="<?= PATH ?>">Main</a><span style="margin: 0 10px;">/</span></li>
+                <li><a href="<?= PATH ?>">Home</a><span style="margin: 0 10px;">/</span></li>
                 <li>Register</li>
             </ol>
         </div>
