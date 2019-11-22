@@ -9,20 +9,26 @@ use app\models\User;
 class UserController extends AppController {
 
     public function signupAction(){
-        $this->setMeta('Register');
         if(!empty($_POST)){
             $user = new User();
             $data = $_POST;
             $user->load($data);
-            if(!$user->validate($data)){
+            if(!$user->validate($data) || !$user->checkUnique()){
                 $user->getErrors();
-                redirect();
+                $_SESSION['form_data'] = $data;
             }else{
-                $_SESSION['success'] = 'Ok';
-                redirect();
-            }
+                $user->attributes['password'] = password_hash($user->attributes['password'],
+                PASSWORD_DEFAULT);
+                if($user->save('user')){
+                    $_SESSION['success'] = 'Congratulate! Now, you can login.';
+                }else{
+                    $_SESSION['error'] = 'ERROR!';
+                }
 
+            }
+            redirect();
         }
+        $this->setMeta('Register');
     }
 
     public function loginAction(){

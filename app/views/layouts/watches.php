@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <base href="/">
     <?=$this->getMeta();?>
+    <link rel="shortcut icon" href="#" />
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
     <link rel="stylesheet" href="megamenu/css/style.css" rel="stylesheet" type="text/css">
@@ -248,6 +249,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/validator.js"></script>
 <script src="js/typeahead.bundle.js"></script>
 <!--dropdown-->
 <script src="js/jquery.easydropdown.js"></script>
@@ -255,31 +257,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/responsiveslides.min.js"></script>
 <script>
     // You can also use "$(window).load(function() {"
-    $(function () {
-        // Slideshow 4
-        $("#slider4").responsiveSlides({
-            auto: true,
-            pager: true,
-            nav: true,
-            speed: 500,
-            namespace: "callbacks",
-            before: function () {
-                $('.events').append("<li>before event fired.</li>");
-            },
-            after: function () {
-                $('.events').append("<li>after event fired.</li>");
-            }
-        });
+        $(function() {
+            // Slideshow 4
+            $.noConflict()
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
 
-    });
+        });
 </script>
 
 <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <script src="megamenu/js/megamenu.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
 <!--End-slider-script-->
 <?php
 use \RedBeanPHP\R as R;

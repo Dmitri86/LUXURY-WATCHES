@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <base href="/">
     <?=$this->getMeta();?>
+    <link rel="shortcut icon" href="#" />
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
@@ -34,12 +35,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="box">
                             <select id="currency" tabindex="4" class="dropdown drop">
                                 <?php new \app\widgets\currency\Currency();?>
-                            </select>
-                        </div>
-                        <div class="box1">
-                            <select tabindex="4" class="dropdown">
-                                <option value="" class="label">English :</option>
-                                <option value="1">English</option>
                             </select>
                         </div>
                         <div class="clearfix"></div>
@@ -269,6 +264,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
 </script>
 <script src="js/jquery.easydropdown.js"></script>
+
+
 <!--End-slider-script-->
 <?php
 use \RedBeanPHP\R as R;

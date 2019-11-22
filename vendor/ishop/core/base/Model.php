@@ -5,6 +5,7 @@ namespace ishop\base;
 
 
 use ishop\Db;
+use RedBeanPHP\R;
 use Valitron\Validator;
 
 
@@ -49,6 +50,14 @@ abstract class Model extends \RedBeanPHP\SimpleModel{
         }
         $errors .= '</ul>';
         $_SESSION['error'] = $errors;
+    }
+
+    public function save($table){
+        $tbl = R::dispense($table);
+        foreach ($this->attributes as $name => $value) {
+            $tbl->$name = $value;
+        }
+        return R::store($tbl);
     }
 
 }
