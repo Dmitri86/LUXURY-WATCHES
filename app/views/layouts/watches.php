@@ -41,6 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                Account<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
+
                                 <?php if(!empty($_SESSION['user'])) : ?>
                                 <li><a href="#">Welcome, <?=h($_SESSION['user']['name'])?>
                                     </a></li>
@@ -87,6 +88,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <!--top-header-->
 <!--start-logo-->
+
 <div class="logo">
     <a href="<?=PATH;?>"><h1>Luxury Watches</h1></a>
 </div>
