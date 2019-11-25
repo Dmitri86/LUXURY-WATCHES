@@ -276,12 +276,12 @@ href="cart/add?id=<?=$item['id']?>" data-id="<?=$item['id'];?>"><i></i></a>
                     <section class="sky-form">
                         <h4>discount</h4>
                         <div class="row1 row2 scroll-pane">
-                            <div class="col col-4">
+                            <div class="col">
                                 <label class="radio"><input type="radio" name="radio" checked=""><i></i>60 % and above</label>
                                 <label class="radio"><input type="radio" name="radio"><i></i>50 % and above</label>
                                 <label class="radio"><input type="radio" name="radio"><i></i>40 % and above</label>
                             </div>
-                            <div class="col col-4">
+                            <div class="col">
                                 <label class="radio"><input type="radio" name="radio"><i></i>30 % and above</label>
                                 <label class="radio"><input type="radio" name="radio"><i></i>20 % and above</label>
                                 <label class="radio"><input type="radio" name="radio"><i></i>10 % and above</label>

@@ -964,7 +964,7 @@ a.mask {
 }
 .row1 {
     outline: none;
-    padding: 20px;
+    padding: 4px;
     overflow: auto;
     height: 155px;
 }
@@ -1046,7 +1046,6 @@ a.mask {
 	line-height: 27px;
 	color: #555555;
 	cursor: pointer;
-	text-transform: capitalize;
 	font-weight: normal;
 	margin-top: 0;
 }
@@ -3244,3 +3243,20 @@ form .has-error .form-control{
 	cursor: pointer;
 }
 
+.preloader{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:9999;
+	background-color:#fefefe;
+	opacity: .7;
+	display: none;
+}
+.preloader img{
+	position:relative;
+	left:50%;
+	top:50vh;
+	margin:-100px 0 0 -100px;
+}
