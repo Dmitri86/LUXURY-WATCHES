@@ -2,3 +2,7 @@ tmp/
 vendor/gabordemooij
 vendor/vlucas
 public/megamenu
+vendor/doctrine
+vendor/egulias
+vendor/swiftmailer
+vendor/symfony
