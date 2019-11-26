@@ -1,8 +1,8 @@
 tmp/
-vendor/gabordemooij
-vendor/vlucas
-public/megamenu
 vendor/doctrine
 vendor/egulias
+vendor/gabordemooij
 vendor/swiftmailer
 vendor/symfony
+vendor/vlucas
+public/adminlte

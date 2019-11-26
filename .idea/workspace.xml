@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90f08f87-6a76-4368-861d-af41cb0c35ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/filter/Filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/filter/Filter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/filter/filter_tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/filter/filter_tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ishop/core/libs/Pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ishop/core/libs/Pagination.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/adminlte" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -83,6 +81,7 @@
       <recent name="C:\OpenServer\OSPanel\domains\ishop2.loc\app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\OSPanel\domains\ishop2.loc\public\adminlte" />
       <recent name="C:\OpenServer\OSPanel\domains\ishop2.loc\public" />
     </key>
   </component>
@@ -113,7 +112,7 @@
       <workItem from="1573740045118" duration="11208000" />
       <workItem from="1573808687692" duration="136321000" />
       <workItem from="1574671663973" duration="6359000" />
-      <workItem from="1574693864196" duration="13553000" />
+      <workItem from="1574693864196" duration="17295000" />
     </task>
     <servers />
   </component>
