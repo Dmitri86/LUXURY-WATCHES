@@ -144,6 +144,12 @@ $('body').on('change', '.w_sidebar input', function(){
             success: function (res) {
                 $('.preloader').delay(500).fadeOut('slow', function (){
                    $('.product-one').html(res).fadeIn();
+                   var url = location.search.replace(/filter(.+?)(&|$)/g, '');
+                   var newURL = location.pathname + url + (location.search ? "&" : "?") +
+                       "filter=" + data;
+                   newURL = newURL.replace('&&', '&');
+                   newURL = newURL.replace('?&', '?');
+                   history.pushState({}, '', newURL);
                 });
             },
             error: function(){
