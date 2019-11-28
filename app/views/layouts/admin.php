@@ -29,6 +29,7 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="my.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -356,6 +357,16 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        <?php if(isset($_SESSION['error'])) : ?>
+            <div class="alert alert-danger">
+                <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+            </div>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['success'])) : ?>
+            <div class="alert alert-success">
+                <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+            </div>
+        <?php endif; ?>
         <?=$content;?>
     </div>
     <!-- /.content-wrapper -->
@@ -575,6 +586,7 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+<script src="my.js"></script>
 
 
 <?php

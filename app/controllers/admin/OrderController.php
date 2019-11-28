@@ -23,7 +23,7 @@ class OrderController extends AppController {
         `user`.`name`, ROUND(SUM(`order_product`. `price`), 2) AS `sum` FROM `order` JOIN
         `user` ON `order`.`user_id` = `user`.`id`
          JOIN `order_product` ON `order`.`id` = `order_product`.`order_id`
-         GROUP BY `order`.`id` ORDER BY `order`.`date` DESC, `order`.`status`, `order`.`id` LIMIT $start, $perpage");
+         GROUP BY `order`.`id` ORDER BY `order`.`status`, `order`.`id` LIMIT $start, $perpage");
 
 
         $this->setMeta('Список заказов');
@@ -45,7 +45,28 @@ class OrderController extends AppController {
 
         $this->setMeta("Заказ номер {$order_id}");
         $this->set(compact('order', 'order_products'));
+    }
 
+    public function changeAction(){
+        $order_id = $this->getRequestID();
+        $status = !empty($_GET['status']) ? '1' : '0';
+        $order = R::load('order', $order_id);
+        if(!$order){
+            throw new \Exception('Странница не найдена', 404);
+        }
+        $order->status = $status;
+        $order->update_at = date("Y-m-d H:i:s");
+        R::store($order);
+        $_SESSION['success'] = 'Изменения сохранены';
+        redirect();
+    }
+
+    public function deleteAction(){
+        $order_id = $this->getRequestID();
+        $order = R::load('order', $order_id);
+        R::trash($order);
+        $_SESSION['success'] = 'Заказ удален';
+        redirect(ADMIN .'/order');
     }
 
 }
