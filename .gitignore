@@ -5,4 +5,6 @@ vendor/gabordemooij
 vendor/swiftmailer
 vendor/symfony
 vendor/vlucas
-public/adminlte
+public/adminlte/bower_components
+public/adminlte/dist
+public/adminlte/plugins
