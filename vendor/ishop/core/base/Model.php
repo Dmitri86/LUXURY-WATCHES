@@ -29,6 +29,14 @@ abstract class Model extends \RedBeanPHP\SimpleModel{
         }
     }
 
+    public function update($table, $id){
+        $bean = R::load($table, $id);
+        foreach ($this->attributes as $name => $value){
+            $bean->$name = $value;
+        }
+        return R::store($bean);
+    }
+
     public function validate($data){
         $v = new Validator($data);
         $v->rules($this->rules);
