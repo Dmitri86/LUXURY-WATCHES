@@ -27,7 +27,7 @@ id="login" value="<?=h($user->login);?>" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" name="login"
+                            <input type="password" class="form-control" name="password"
 id="password" placeholder="ведите пароль, если хотите его изменить">
                         </div>
                         <div class="form-group has-feedback">
