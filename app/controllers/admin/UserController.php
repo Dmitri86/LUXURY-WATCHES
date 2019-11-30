@@ -38,6 +38,10 @@ class UserController extends AppController{
 
     }
 
+    public function addAction(){
+        $this->setMeta('Новый пользователь');
+    }
+
     public function editAction(){
         if(!empty($_POST)){
             $id = $this->getRequestID(false);
