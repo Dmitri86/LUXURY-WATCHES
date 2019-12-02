@@ -588,6 +588,7 @@
 <script src="dist/js/adminlte.min.js"></script>
 <script src="/js/validator.js"></script>
 <script src="bower_components/ckeditor/ckeditor.js"></script>
+<script src="bower_components/ckeditor/adapters/jquery.js"></script>
 
 
 
