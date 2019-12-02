@@ -1,2 +1,10 @@
 tmp/
 vendor/gabordemooij
+public/adminlte/
+public/upload/
+vendor/doctrine/
+vendor/egulias/
+vendor/swiftmailer/
+vendor/symfony/
+vendor/vlucas/
+
