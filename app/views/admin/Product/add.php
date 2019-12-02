@@ -47,8 +47,8 @@ value="<?php isset($_SESSION['form_data']['title']) ? h($_SESSION['form_data']['
                         <div class="form-group">
                             <label for="keywords">Ключевые слова</label>
                             <input type="text" name="keywords" class="form-control" id="keywords"
-placeholder="Ключевые слова value="<?php isset($_SESSION['form_data']['keywords']) ? h($_SESSION['form_data']['keywords'])
-                                : null;?>"">
+placeholder="Ключевые слова" value="<?php isset($_SESSION['form_data']['keywords']) ? h($_SESSION['form_data']['keywords'])
+                                : null;?>">
                         </div>
 
                         <div class="form-group">
