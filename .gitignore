@@ -1,4 +1,5 @@
 tmp/
+<<<<<<< HEAD
 vendor/gabordemooij
 public/adminlte/
 public/upload/
@@ -8,3 +9,15 @@ vendor/swiftmailer/
 vendor/symfony/
 vendor/vlucas/
 
+=======
+vendor/doctrine
+vendor/egulias
+vendor/gabordemooij
+vendor/swiftmailer
+vendor/symfony
+vendor/vlucas
+public/adminlte/bower_components
+public/adminlte/dist
+public/adminlte/plugins
+public/upload
+>>>>>>> dev
